@@ -9,9 +9,9 @@ using System.Text.RegularExpressions;
 
 namespace EmailCore.Validation
 {
-    public abstract class EmailCore
+    public abstract class EmailInfo
     {
-        public static Response IsValidEmail(string email)
+        public static Response Validation(string email)
         {
             var isSyntaxValidEmail = ValidateEmail(email, ValidationModeEnum.Syntax);
             var mailServers = GetNetworkValidation(isSyntaxValidEmail, email);
